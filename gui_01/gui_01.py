@@ -7,7 +7,7 @@ from requests import delete
 # --------------------
 # funciones de la app
 # --------------------
-"""""
+
 def sumar():
     messagebox.showinfo("Suma 1.0", "Hizo click en el boton sumar...")
     c = int(a.get()) + int(b.get())
@@ -23,7 +23,7 @@ def salir():
     messagebox.showinfo("Suma 1.0", "La app se cerrará...")
     ventana_principal.destroy()
 
-"""""
+
 
 # ------------------
 # ventana principal
@@ -105,39 +105,40 @@ entry_b.place(x=682,y=120)
 # ------------------
 # frame operaciones
 # ------------------
-#frame_operaciones = Frame(ventana_principal)
-#frame_operaciones.config(bg="ivory2", width=780, height=120)
-#frame_operaciones.place(x=10,y=260)
+frame_operaciones = Frame(ventana_principal)
+frame_operaciones.config(bg="ivory2", width=780, height=120)
+frame_operaciones.place(x=10,y=260)
 
 # boton para sumar los números - texto
-#bt_sum = PhotoImage(file="img/boton_sumar.png")
-# bt_sumar = Button(frame_operaciones, text= "Sumar", width=10)
-#bt_sumar = Button(frame_operaciones, image=bt_sum, width=105, height=105, command=sumar)
-#bt_sumar.place(x=116, y=7)
+bt_sum = PhotoImage(file="gui_01/img/boton_sumar.png")
+bt_sumar = Button(frame_operaciones, text= "Sumar", width=10)
+bt_sumar = Button(frame_operaciones, image=bt_sum, width=105, height=105, command=sumar)
+bt_sumar.place(x=116, y=7)
 
 # boton para borrar entradas y resultado
-#bt_bor = PhotoImage(file="img/boton_borrar.png")
-# bt_borrar = Button(frame_operaciones, text="Borrar", width=10)
-#bt_borrar = Button(frame_operaciones, image=bt_bor, width=105, height=105, command=borrar)
-#bt_borrar.place(x=337, y=7)
+bt_bor = PhotoImage(file="gui_01/img/boton_borrar.png")
+bt_borrar = Button(frame_operaciones, text="Borrar", width=10)
+bt_borrar = Button(frame_operaciones, image=bt_bor, width=105, height=105, command=borrar)
+bt_borrar.place(x=337, y=7)
 
 # boton para salir - cerrar la app
-#bt_sal = PhotoImage(file="img/boton_salir.png")
-# bt_salir = Button(frame_operaciones, text="Salir", width=10)
-#bt_salir = Button(frame_operaciones, image=bt_sal, width=105, height=105, command=salir)
-#bt_salir.place(x=558, y=7)
+bt_sal = PhotoImage(file="gui_01/img/boton_salir.png")
+bt_salir = Button(frame_operaciones, text="Salir", width=10)
+bt_salir = Button(frame_operaciones, image=bt_sal, width=105, height=105, command=salir)
+bt_salir.place(x=558, y=7)
 
 # ------------------
 # frame resultados
 # ------------------
-#frame_resultados = Frame(ventana_principal)
-#frame_resultados.config(bg="ivory2", width=780, height=100)
-#frame_resultados.place(x=10,y=390)
+
+frame_resultados = Frame(ventana_principal)
+frame_resultados.config(bg="ivory2", width=780, height=100)
+frame_resultados.place(x=10,y=390)
 
 # area de texto para resultados
-#t_resultados = Text(frame_resultados, width=50, height=3)
-#t_resultados.config(bg="green", fg="white", font=("Courier", 20))
-#t_resultados.pack()
+t_resultados = Text(frame_resultados, width=50, height=3)
+t_resultados.config(bg="green", fg="white", font=("Courier", 20))
+t_resultados.pack()
 
 # se ejecuta el metodo mainloop() de la clase Tk() a través de la instancia ventana_principal.  Este metodo despliega una ventana simple en pantalla y queda a la espera de lo que el usuario haga (click en boton, escribir, etc).  Cada accion del usuario se conoce como un evento.  El metodo mainloop() es un bucle infinito.
 ventana_principal.mainloop()
